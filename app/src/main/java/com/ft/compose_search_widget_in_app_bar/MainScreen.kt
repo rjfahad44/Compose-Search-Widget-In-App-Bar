@@ -34,6 +34,11 @@ fun MainAppBar(
     onSearchTriggered: () -> Unit
 ) {
     when (searchWidgetState) {
+        SearchWidgetState.CLOSED -> {
+            DefaultAppBar(
+                onSearchClicked = onSearchTriggered
+            )
+        }
 
     }
 }
