@@ -26,6 +26,29 @@ fun MainScreen(mainViewModel: MainViewModel) {
 
 
 @Composable
+fun DefaultAppBar(onSearchClicked: () -> Unit) {
+    TopAppBar(
+        title = {
+            Text(
+                text = "Home"
+            )
+        },
+        actions = {
+            IconButton(
+                onClick = { onSearchClicked() }
+            ) {
+                Icon(
+                    imageVector = Icons.Filled.Search,
+                    contentDescription = "Search Icon",
+                    tint = Color.White
+                )
+            }
+        }
+    )
+}
+
+
+@Composable
 fun SearchAppBar(
     text: String,
     onTextChange: (String) -> Unit,
