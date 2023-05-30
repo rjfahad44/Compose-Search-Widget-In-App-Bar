@@ -33,7 +33,9 @@ fun MainAppBar(
     onSearchClicked: (String) -> Unit,
     onSearchTriggered: () -> Unit
 ) {
+    when (searchWidgetState) {
 
+    }
 }
 
 @Composable
