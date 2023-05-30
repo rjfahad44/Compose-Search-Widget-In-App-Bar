@@ -23,3 +23,14 @@ import androidx.compose.ui.unit.dp
 fun MainScreen(mainViewModel: MainViewModel) {
 
 }
+
+@Composable
+@Preview
+fun SearchAppBarPreview() {
+    SearchAppBar(
+        text = "Some random text",
+        onTextChange = {},
+        onCloseClicked = {},
+        onSearchClicked = {}
+    )
+}
