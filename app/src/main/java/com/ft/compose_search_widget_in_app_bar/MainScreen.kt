@@ -39,7 +39,46 @@ fun SearchAppBar(
         elevation = AppBarDefaults.TopAppBarElevation,
         color = MaterialTheme.colors.primary
     ) {
-
+        TextField(modifier = Modifier.fillMaxWidth(), value = text, onValueChange = {
+            onTextChange(it)
+        }, placeholder = {
+            Text(
+                modifier = Modifier.alpha(ContentAlpha.medium),
+                text = "Search here...",
+                color = Color.White
+            )
+        }, textStyle = TextStyle(
+            fontSize = MaterialTheme.typography.subtitle1.fontSize
+        ), singleLine = true, leadingIcon = {
+            IconButton(modifier = Modifier.alpha(ContentAlpha.medium), onClick = {}) {
+                Icon(
+                    imageVector = Icons.Default.Search,
+                    contentDescription = "Search Icon",
+                    tint = Color.White
+                )
+            }
+        }, trailingIcon = {
+            IconButton(onClick = {
+                if (text.isNotEmpty()) {
+                    onTextChange("")
+                } else {
+                    onCloseClicked()
+                }
+            }) {
+                Icon(
+                    imageVector = Icons.Default.Close,
+                    contentDescription = "Close Icon",
+                    tint = Color.White
+                )
+            }
+        }, keyboardOptions = KeyboardOptions(
+            imeAction = ImeAction.Search
+        ), keyboardActions = KeyboardActions(onSearch = {
+            onSearchClicked(text)
+        }), colors = TextFieldDefaults.textFieldColors(
+            backgroundColor = Color.Transparent,
+            cursorColor = Color.White.copy(alpha = ContentAlpha.medium)
+        ))
     }
 }
 
@@ -53,10 +92,8 @@ fun DefaultAppBarPreview() {
 @Composable
 @Preview
 fun SearchAppBarPreview() {
-    SearchAppBar(
-        text = "Some random text",
+    SearchAppBar(text = "Some random text",
         onTextChange = {},
         onCloseClicked = {},
-        onSearchClicked = {}
-    )
+        onSearchClicked = {})
 }
