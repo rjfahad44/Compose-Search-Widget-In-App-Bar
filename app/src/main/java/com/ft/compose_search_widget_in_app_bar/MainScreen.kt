@@ -1,5 +1,6 @@
 package com.ft.compose_search_widget_in_app_bar
 
+import android.annotation.SuppressLint
 import android.util.Log
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -19,6 +20,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun MainScreen(mainViewModel: MainViewModel) {
 
@@ -44,7 +46,7 @@ fun MainScreen(mainViewModel: MainViewModel) {
                 }
             )
         }
-    ) {}
+    ){}
 
 }
 
@@ -164,7 +166,7 @@ fun DefaultAppBarPreview() {
 @Composable
 @Preview
 fun SearchAppBarPreview() {
-    SearchAppBar(text = "Some random text",
+    SearchAppBar(text = "Search",
         onTextChange = {},
         onCloseClicked = {},
         onSearchClicked = {})
