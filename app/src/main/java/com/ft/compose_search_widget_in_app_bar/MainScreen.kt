@@ -24,6 +24,17 @@ fun MainScreen(mainViewModel: MainViewModel) {
 
 }
 
+@Composable
+fun MainAppBar(
+    searchWidgetState: SearchWidgetState,
+    searchTextState: String,
+    onTextChange: (String) -> Unit,
+    onCloseClicked: () -> Unit,
+    onSearchClicked: (String) -> Unit,
+    onSearchTriggered: () -> Unit
+) {
+
+}
 
 @Composable
 fun DefaultAppBar(onSearchClicked: () -> Unit) {
