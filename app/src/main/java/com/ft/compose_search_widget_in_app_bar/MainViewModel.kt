@@ -7,6 +7,10 @@ import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
 
+    private val _searchWidgetState: MutableState<SearchWidgetState> =
+        mutableStateOf(value = SearchWidgetState.CLOSED)
+    val searchWidgetState: State<SearchWidgetState> = _searchWidgetState
+
 
 
 }
