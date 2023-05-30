@@ -20,14 +20,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeSearchWidgetInAppBarTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-
-                }
+                MainScreen(mainViewModel = mainViewModel)
             }
         }
     }
 }
+
+
 
