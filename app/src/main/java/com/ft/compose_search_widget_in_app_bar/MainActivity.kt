@@ -26,5 +26,9 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-
+@Composable
+@Preview(showSystemUi = true)
+fun MainScreenPreview() {
+    MainScreen(mainViewModel = MainViewModel())
+}
 
