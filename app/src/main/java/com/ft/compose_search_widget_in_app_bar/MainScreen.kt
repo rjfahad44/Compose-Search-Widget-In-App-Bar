@@ -26,6 +26,12 @@ fun MainScreen(mainViewModel: MainViewModel) {
 
 @Composable
 @Preview
+fun DefaultAppBarPreview() {
+    DefaultAppBar(onSearchClicked = {})
+}
+
+@Composable
+@Preview
 fun SearchAppBarPreview() {
     SearchAppBar(
         text = "Some random text",
