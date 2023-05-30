@@ -39,7 +39,14 @@ fun MainAppBar(
                 onSearchClicked = onSearchTriggered
             )
         }
-
+        SearchWidgetState.OPENED -> {
+            SearchAppBar(
+                text = searchTextState,
+                onTextChange = onTextChange,
+                onCloseClicked = onCloseClicked,
+                onSearchClicked = onSearchClicked
+            )
+        }
     }
 }
 
