@@ -22,6 +22,11 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun MainScreen(mainViewModel: MainViewModel) {
 
+    val searchWidgetState by mainViewModel.searchWidgetState
+    val searchTextState by mainViewModel.searchTextState
+
+
+
 }
 
 @Composable
